@@ -1,0 +1,13 @@
+<div class="header">
+  <div class="row row-1">
+    <div class="title">GitHub ~</div>
+    <div class="input">
+      <mat-form-field>
+        <input matInput placeholder="Поисковый запрос..." (input)="search($event.target.value)">
+        <mat-hint align="start"><strong></strong>Введите запрос для поиска репозиториев на GitHub</mat-hint>
+        <mat-hint align="end">Всего: {{total_count$ | async}}</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+  <mat-progress-bar mode="indeterminate" *ngIf="indicator$ | async"></mat-progress-bar>
+</div>

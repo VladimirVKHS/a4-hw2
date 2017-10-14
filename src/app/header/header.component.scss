@@ -1,0 +1,24 @@
+.header {
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &.row-1 {
+      .title {
+        text-align: right;
+        font-family: 'Fjalla One', sans-serif;
+        display: inline-block;
+        padding: 0 0 0 20px;
+        font-size: 30px;
+      }
+      .input {
+        display: inline-block;
+        padding: 4px 20px;
+        flex-grow: 1;
+        mat-form-field {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

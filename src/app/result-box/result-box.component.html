@@ -1,0 +1,41 @@
+<div class="result-box">
+  <div class="repo" *ngFor="let repo of repos$ | async" (click)="goto(repo)">
+    <div class="avatar">
+      <img [src]="repo.owner.avatar_url" [alt]="repo.owner.login">
+    </div>
+    <div class="name">
+      <div class="name_">{{repo.name}}</div>
+      <div class="description">{{repo.description}}</div>
+    </div>
+    <div class="forks metric">
+      <div class="title">forks</div>
+      <div class="value">{{repo.forks_count}}</div>
+    </div>
+    <div class="watchers metric">
+      <div class="title">watchers</div>
+      <div class="value">{{repo.watchers_count}}</div>
+    </div>
+    <div class="score metric">
+      <div class="title">score</div>
+      <div class="value">{{repo.score}}</div>
+    </div>
+  </div>
+</div>
+
+<!--
+<mat-card class="repo" *ngFor="let repo of repos$ | async">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{repo.name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="repo.owner.avatar_url" [alt]="repo.owner.login">
+  <mat-card-content>
+    <p>
+      {{repo.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="goto(repo)">Перейти в репозиторий</button>
+  </mat-card-actions>
+</mat-card>
+-->
